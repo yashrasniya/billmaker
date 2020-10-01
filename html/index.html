@@ -5,11 +5,11 @@
     <title>home</title>
 </head>
 <body>
-<form method="post" >
+<form method="POST" >
 
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" name="Save"/>
+    <input type="submit" value="Save"/>
 </form>
 </body>
 </html>

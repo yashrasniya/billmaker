@@ -8,7 +8,7 @@ def index(request):
     form = data_of_user(request.POST or None)
     if form.is_valid():
         form.save()
-        form = data_of_user()
+        # form = data_of_user()
     context = {
         'form': form
     }
