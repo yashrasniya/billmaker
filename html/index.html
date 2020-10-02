@@ -7,21 +7,24 @@
 <body>
 <form method="post">
         {% csrf_token %}
-<input type="number" name="num"></form>
+<input type="number" name="num" >
+<input type="submit"></form>
 {% for i in  num %}
 <form method="POST" >
 
     {% csrf_token %}
     {{form.as_p}}
-
-    <input type="submit" value="Save">
-</form>
+    {% endfor %}
 {% block content %}
 
 
     {%endblock%}
+    <input type="submit" value="Save">
+</form>
 
-{% endfor %}
+
+
+
 <button onclick="myFunction()">Try it</button>
 
 <script>
