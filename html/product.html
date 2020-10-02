@@ -4,5 +4,14 @@
 
 <h1>i</h1>
 
+<button onclick="myFunction()">Try it</button>
 
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  var t = document.createTextNode("Click me");
+  x.appendChild(t);
+  document.body.appendChild(x);
+}
+</script>
 {% endblock %}

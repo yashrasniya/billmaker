@@ -2,25 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>home</title>
+    <title>Title</title>
 </head>
-<body><form method="post">
-        {% csrf_token %}
-<input type="number" name="num"></form>
-{% for i in  num %}
-<form method="POST" >
-
-    {% csrf_token %}
-    {{form.as_p}}
-    {% block content %}
+<body>
+<!DOCTYPE html>
 
 
-    {%endblock%}
-    <input type="submit" value="Save">
-</form>
+<p>Click the "Try it" button to create a BUTTON element with a "Click me" text.</p>
 
-
-{% endfor %}
 <button onclick="myFunction()">Try it</button>
 
 <script>
@@ -31,5 +20,7 @@ function myFunction() {
   document.body.appendChild(x);
 }
 </script>
+
+
 </body>
 </html>
