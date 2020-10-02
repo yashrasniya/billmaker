@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <title>home</title>
 </head>
-<body>
+<body><form method="post">
+        {% csrf_token %}
+<input type="number" name="num"></form>
+{% for i in  num %}
 <form method="POST" >
 
     {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Save"/>
+    {% block content %}
+
+
+    {%endblock%}
+    <input type="submit" value="Save">
 </form>
+
+
+{% endfor %}
 </body>
 </html>
