@@ -1,6 +1,11 @@
 
 {% extends 'index.html' %}
 {% block content %}
+<form metord="post">
+    {%csrf_token%}
+        {{form.as_p}}
+    <input type="submit"/>
+</form>
 
 <h1>i</h1>
 

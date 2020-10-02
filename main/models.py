@@ -9,8 +9,8 @@ class data(models.Model):
     date = models.DateField(default=str(datetime.datetime.now())[:10])
     addres = models.CharField(max_length=50, null=True, blank=True)
     state = models.CharField(max_length=50, null=True, blank=True)
-    name_of_product = models.CharField(blank=False,max_length=200)
-    quantity_of_product = models.IntegerField(blank=False)
-    gst = models.IntegerField(blank=False, default=18)
-    rate_of_product = models.IntegerField(blank=False)
+    name_of_product = models.CharField(blank=True,max_length=200)
+    quantity_of_product = models.IntegerField(blank=True,default=20)
+    gst = models.IntegerField(blank=True, default=18)
+    rate_of_product = models.IntegerField(blank=True,default=20 )
 

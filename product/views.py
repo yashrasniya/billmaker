@@ -7,7 +7,7 @@ def product(requst):
     if form.is_valid():
         form.save();
         form = product_details()
-        return redirect('product')
+        return redirect('/')
 
     data={
         'form':form,

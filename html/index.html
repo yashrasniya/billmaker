@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>home</title>
 </head>
-<body><form method="post">
+<body>
+<form method="post">
         {% csrf_token %}
 <input type="number" name="num"></form>
 {% for i in  num %}
@@ -12,13 +13,13 @@
 
     {% csrf_token %}
     {{form.as_p}}
-    {% block content %}
+
+    <input type="submit" value="Save">
+</form>
+{% block content %}
 
 
     {%endblock%}
-    <input type="submit" value="Save">
-</form>
-
 
 {% endfor %}
 <button onclick="myFunction()">Try it</button>
