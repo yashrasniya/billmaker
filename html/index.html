@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>home</title>
 </head>
-<body>
+<body bgcolor="green">
 <form method="post">
         {% csrf_token %}
 <input type="number" name="num" >
 <input type="submit"></form>
-{% for i in  num %}
-<form method="POST" >
 
+<form method="POST" >
     {% csrf_token %}
-    {{form.as_p}}
-    {% endfor %}
+    <input name="{{i}}">
+    <input name="val" type="hidden" value={{num}}>
+    {% csrf_token %}
+    {{form}}
+
 {% block content %}
 
 
@@ -31,6 +33,7 @@
 function myFunction() {
   var x = document.createElement("INPUT");
   var t = document.createTextNode("Click me");
+
   x.appendChild(t);
   document.body.appendChild(x);
 }

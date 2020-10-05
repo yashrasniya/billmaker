@@ -9,4 +9,4 @@ class product_details(forms.ModelForm):
             'quantity_of_product',
             'gst',
             'rate_of_product',
-        ]
+]
